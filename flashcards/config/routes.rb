@@ -10,27 +10,23 @@ Rails.application.routes.draw do
       post 'login',  to: 'sessions#login'
       post 'logout', to: 'sessions#logout'
 
-      namespace :me do
+      get    'cards',     to: 'cards#index'
+      post   'cards',     to: 'cards#create'
+      get    'cards/:id', to: 'cards#show'
+      put    'cards/:id', to: 'cards#update'
+      delete 'cards/:id', to: 'cards#destroy'
 
-        get    'cards',     to: 'cards#index'
-        post   'cards',     to: 'cards#create'
-        get    'cards/:id', to: 'cards#show'
-        put    'cards/:id', to: 'cards#update'
-        delete 'cards/:id', to: 'cards#destroy'
+      get    'decks',     to: 'decks#index'
+      post   'decks',     to: 'decks#create'
+      get    'decks/:id', to: 'decks#show'
+      put    'decks/:id', to: 'decks#update'
+      delete 'decks/:id', to: 'decks#destroy'
 
-        get    'decks',     to: 'decks#index'
-        post   'decks',     to: 'decks#create'
-        get    'decks/:id', to: 'decks#show'
-        put    'decks/:id', to: 'decks#update'
-        delete 'decks/:id', to: 'decks#destroy'
+      get    'deckcards',     to: 'deck_cards#index'
+      post   'deckcards',     to: 'deck_cards#create'
+      get    'deckcards/:id', to: 'deck_cards#show'
+      delete 'deckcards/:id', to: 'deck_cards#destroy'
 
-        get    'deckcards',     to: 'deckcards#index'
-        post   'deckcards',     to: 'deckcards#create'
-        get    'deckcards/:id', to: 'deckcards#show'
-        delete 'deckcards/:id', to: 'deckcards#destroy'
-
-
-      end
     end
   end
 

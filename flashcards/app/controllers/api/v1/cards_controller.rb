@@ -1,5 +1,5 @@
-module Api::V1::Me
-  class CardsController < Api::V1::AuthedController
+module Api::V1
+  class CardsController < AuthedController
     before_action :attempt_set_card, only: [:show, :update, :destroy]
 
   # GET /cards

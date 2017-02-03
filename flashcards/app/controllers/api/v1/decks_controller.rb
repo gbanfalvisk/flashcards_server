@@ -1,5 +1,5 @@
-module Api::V1::Me
-  class DecksController < Api::V1::AuthedController
+module Api::V1
+  class DecksController < AuthedController
     before_action :attempt_set_deck, only: [:show, :update, :destroy]
 
   # GET /decks

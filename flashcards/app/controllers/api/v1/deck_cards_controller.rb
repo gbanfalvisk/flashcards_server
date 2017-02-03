@@ -1,5 +1,5 @@
-module Api::V1::Me
-  class DeckcardsController < Api::V1::AuthedController
+module Api::V1
+  class DeckCardsController < AuthedController
     before_action :attempt_set_deckcard, only: [:show, :destroy]
 
   # GET /deckcards
@@ -10,7 +10,7 @@ module Api::V1::Me
 
   # GET /deckcards/1
   def show
-    render json: @deckcards
+    render json: @deckcard
   end
 
   # POST /deckcard
