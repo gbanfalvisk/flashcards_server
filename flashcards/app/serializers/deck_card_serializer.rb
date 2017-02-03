@@ -1,5 +1,5 @@
 class DeckCardSerializer < ActiveModel::Serializer
-  attributes :id, :deck, :card
+  attributes :id, :user, :deck, :card
 
   def deck
     object.deck.id
@@ -7,5 +7,9 @@ class DeckCardSerializer < ActiveModel::Serializer
 
   def card
     object.card.id
+  end
+
+    def user
+    object.user.id
   end
 end

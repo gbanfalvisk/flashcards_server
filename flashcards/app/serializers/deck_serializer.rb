@@ -1,7 +1,7 @@
 class DeckSerializer < ActiveModel::Serializer
-  attributes :id, :user_id, :title, :descr, :color, :card_count
+  attributes :id, :user, :title, :descr, :color, :card_count
 
-  def user_id
+  def user
     object.user.id
   end
 end
