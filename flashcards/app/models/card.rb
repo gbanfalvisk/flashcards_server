@@ -6,4 +6,5 @@ class Card < ApplicationRecord
     def deck_count
         decks.size
     end
+    
 end
